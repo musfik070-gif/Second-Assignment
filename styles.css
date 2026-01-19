@@ -160,7 +160,7 @@ img { max-width: 100%; display: block; }
 
 
 
-/*  BANNER SECTION  */
+/* Banner Section */
 .banner-section {
     position: relative;
     padding: 100px 0 80px;
@@ -277,14 +277,14 @@ img { max-width: 100%; display: block; }
     height: auto;
 }
 
-/*  ANIMATIONS  for logo*/
+/* Animation for Logo */
 @keyframes pulse-glow {
     0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 127, 0.4); }
     50% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(255, 0, 127, 0); }
     100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 127, 0); }
 }
 
-/*  RESPONSIVE  */
+/* Responsive */
 @media (max-width: 576px) {
     .banner-section { padding: 60px 0; }
     
@@ -302,6 +302,79 @@ img { max-width: 100%; display: block; }
     
     .btn { width: 100%; max-width: 280px; justify-content: center; }
 }
+
+/* About Section */
+.about-section {
+   padding: 80px 0;
+   text-align: center;
+}
+
+.section-title {
+   font-size: 2.5rem;
+   font-weight: 700;
+   margin-bottom: 20px;
+}
+
+.section-desc {
+   font-size: 1rem;
+   color: var(--text-gray);
+   max-width: 800px;
+   margin: 0 auto 60px; 
+   line-height: 1.8;
+}
+
+.stats-grid {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr); 
+   gap: 30px;
+   border-top: 1px solid rgba(255, 255, 255, 0.1); 
+   padding-top: 50px;
+}
+
+.stat-number {
+   font-size: 3rem;
+   font-weight: 700;
+   color: var(--accent-green);
+   margin-bottom: 10px;
+}
+
+.stat-label {
+   font-size: 0.9rem;
+   color: var(--text-white);
+   letter-spacing: 1px;
+   text-transform: uppercase;
+}
+
+.star {
+   color: var(--accent-green);
+   font-size: 2.5rem;
+   vertical-align: middle;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+   .stat-number { font-size: 2.5rem; }
+}
+
+@media (max-width: 576px) {
+   .section-title { font-size: 2rem; }
+  
+   .section-desc {
+       font-size: 0.95rem;
+       text-align: left; 
+       padding: 0 10px;
+   }
+
+   .stats-grid {
+       grid-template-columns: repeat(2, 1fr);
+       gap: 40px 20px; 
+   }
+   
+   .stat-number { font-size: 2rem; }
+}
+
+
+
 
 
 
