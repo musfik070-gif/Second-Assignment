@@ -373,8 +373,201 @@ img { max-width: 100%; display: block; }
    .stat-number { font-size: 2rem; }
 }
 
+/* why-choose-section */
+.why-choose-section {
+    padding: 80px 0;
+}
 
+.why-choose-section .section-title {
+    margin-bottom: 50px;
+}
 
+.text-center { text-align: center; }
+
+.features-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-areas: 
+        "audio mobile"
+        "audio global"
+        "interview resource";
+    grid-template-columns: 1fr 1fr; 
+}
+.feature-card {
+    background-color: #1E0B2B; 
+    padding: 30px;
+    border-radius: 20px;
+    transition: transform 0.3s ease, background 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+.card-audio {
+    grid-area: audio;
+    background: linear-gradient(180deg, #2A0E45 0%, #1E0B2B 100%);
+}
+
+.card-mobile { grid-area: mobile; }
+.card-global { grid-area: global; }
+.card-interview { grid-area: interview; }
+.card-resource { grid-area: resource; }
+
+.icon-box {
+    margin-bottom: 20px;
+}
+.f-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.icon-emoji {
+    font-size: 2.5rem;
+    color: #FF007F;
+}
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.feature-card p {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    line-height: 1.5;
+}
+/* Responsive */
+@media (max-width: 992px) {
+    .features-grid {
+
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "audio"
+            "mobile"
+            "global"
+            "interview"
+            "resource";
+    }
+}
+
+/* Feature Episode Section */
+.episodes-section {
+    padding: 80px 0;
+}
+
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+.episode-card {
+    background-color: #1A0B2E;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.episode-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.video-thumbnail {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.video-thumbnail iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.video-thumbnail:hover .thumb-img {
+    opacity: 1;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, background 0.3s;
+}
+
+.play-icon {
+    color: white;
+    font-size: 1.2rem;
+    margin-left: 3px;
+}
+
+.episode-card:hover .play-overlay {
+    background: var(--btn-gradient);
+    transform: translate(-50%, -50%) scale(1.1);
+    border: none;
+}
+
+.episode-content {
+    padding: 20px;
+}
+
+.episode-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.episode-content p {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.episode-meta {
+    font-size: 0.85rem;
+    color: var(--accent-green);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Responsive For epospde */
+@media (max-width: 992px) {
+    .episodes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .episodes-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 
 
